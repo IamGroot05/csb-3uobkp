@@ -1,37 +1,3 @@
-// .container{
-//     top: 0%;
-//     display: flex;
-//     background-color: rgba(255, 255, 255, 0.2);
-//     backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-//     -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-//     height: 5em;
-//     width: 100%;
-//     position: sticky;
-//     justify-content: space-around;
-//     align-items: center;
-
-// }
-
-// .float-left{
-//     position: fixed;
-//       float: left;
-//       left: 8%;
-// }
-
-// .float-right{
-//     position: fixed;
-//     float: right;
-//     right: 8%;
-//     cursor: pointer;
-// }
-
-// .right-span{
-//     display: inline-flex;
-// }
-// .right-span img{
-//     width: 2em;
-// }
-
 .navbar{
     position: fixed;
     width: 100%;
@@ -98,4 +64,63 @@
 }
 .navbar.sticky .menu li a:hover{
     color: rgb(23, 94, 26);
+}
+
+
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+//     .navbar{
+
+//     }
+//     }
+ 
+
+input[type=checkbox] {
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 35px;
+    user-select: none;
+    color: #fdfdff;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 768px) {
+    .navbar .max-width{
+        margin-left: 10px;
+    }
+
+    .home-title{
+        font-size: 2.4em;
+         
+    }
+
+    .navbar .menu-inner li  {
+        margin-top: 12px;
+        width: 100%;
+        display: flex;
+    }
+
+    .navbar .menu li a{
+        margin-left: 45%;
+    }
+    .menu-inner {
+        display:none;
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        right: 0;
+        left: 0;
+        // padding: 16px 0px;
+    }
+    
+    input[type=checkbox]:checked ~ .menu-inner {
+        display: block;
+    }
+    
+    .hamburger {
+       display: block;
+    }
+
+
 }
